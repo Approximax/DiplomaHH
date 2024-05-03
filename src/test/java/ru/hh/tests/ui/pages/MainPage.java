@@ -23,6 +23,12 @@ public class MainPage {
 
         titleJobForEvery.shouldHave(text(language.description));
     }
+
+    public void searchInput(String value) {
+        openPage();
+        searchInput.setValue(value);
+        submitSearch.click();
+    }
 }
 
 
