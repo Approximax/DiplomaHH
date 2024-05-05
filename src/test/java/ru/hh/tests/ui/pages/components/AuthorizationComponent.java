@@ -1,31 +1,29 @@
 package ru.hh.tests.ui.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
-import ru.hh.tests.ui.pages.MainPage;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class AuthorizationComponent {
 
-    SelenideElement loginButton = $("[data-qa = 'login']"),
-                    emailLogin = $("[data-qa = 'account-signup-email']"),
+    SelenideElement emailLogin = $("[data-qa = 'login-input-username']"),
                     loginWithPassword = $("[data-qa = 'expand-login-by-password']"),
                     passwordInput = $("[data-qa = 'login-input-password']"),
                     loginSubmit = $("[data-qa = 'account-login-submit']"),
                     vacanciesForYou = $("[data-qa = 'bloko-header-2']");
 
-    MainPage mainPage = new MainPage();
+    public void openPage() {
+        open("/account/login");
+    }
 
     public void emailAuthPassword (String email, String password) {
-        mainPage.openPage();
-        loginButton.click();
-        emailLogin.setValue(email);
         loginWithPassword.click();
+        emailLogin.setValue(email);
         passwordInput.setValue(password);
         loginSubmit.click();
-
     }
 
     public void checkAuthSuccess() {
@@ -33,26 +31,22 @@ public class AuthorizationComponent {
 
     }
 
-    public AuthorizationComponent checkOnlyLoginAuth(String email) {
-        mainPage.openPage();
-        loginButton.click();
+    public void checkOnlyLoginAuth(String email) {
+        loginWithPassword.click();
         emailLogin.setValue(email);
         loginSubmit.click();
 
-        vacanciesForYou.shouldNotBe(visible);
+        vacanciesForYou.shouldNotBe(exist);
 
-        return this;
     }
 
-    public AuthorizationComponent checkOnlyPassword(String password) {
-        mainPage.openPage();
-        loginButton.click();
+    public void checkOnlyPassword(String password) {
+        loginWithPassword.click();
         passwordInput.setValue(password);
         loginSubmit.click();
 
         vacanciesForYou.shouldNotBe(exist);
 
-        return this;
     }
 
 }

@@ -25,6 +25,8 @@ public class TestBase {
         Configuration.browser = driverConfig.browserName();
         Configuration.browserSize = driverConfig.browserSize();
         Configuration.browserVersion = driverConfig.browserVersion();
+
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @BeforeEach

@@ -21,6 +21,10 @@ public class AuthorizationTests extends TestBase {
     @Test
     @DisplayName("Authorization with correct credentials")
     void correctAuthTest() {
+        step("Open authorization page", () -> {
+            authorizationComponent.openPage();
+        });
+
         step("Authorize with correct email and password", () -> {
             authorizationComponent.emailAuthPassword(userConfig.login(), userConfig.password());
         });
@@ -33,6 +37,10 @@ public class AuthorizationTests extends TestBase {
     @Test
     @DisplayName("Authorization with only login input")
     void onlyLoginAuthTest() {
+        step("Open authorization page", () -> {
+            authorizationComponent.openPage();
+        });
+
         step("Authorize only with login", () -> {
             authorizationComponent.checkOnlyLoginAuth(userConfig.login());
         });
@@ -41,6 +49,10 @@ public class AuthorizationTests extends TestBase {
     @Test
     @DisplayName("Authorization with only password input")
     void onlyPasswordAuthTest() {
+        step("Open authorization page", () -> {
+            authorizationComponent.openPage();
+        });
+
         step("Authorize only with password", () -> {
             authorizationComponent.checkOnlyPassword(userConfig.password());
         });
