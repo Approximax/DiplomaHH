@@ -1,14 +1,17 @@
 package ru.hh.tests.ui;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.tests.TestBase;
 import ru.hh.tests.ui.pages.SearchPage;
 
-import java.util.Locale;
-
 import static io.qameta.allure.Allure.step;
 
+@Tag("search_page")
+@Owner("Vladislav Kryukov")
 public class SearchTests extends TestBase {
     SearchPage searchPage = new SearchPage();
     Faker faker = new Faker();
@@ -16,6 +19,7 @@ public class SearchTests extends TestBase {
     String jobTitle = faker.job().title();
 
     @Test
+    @DisplayName("Checking search results")
     void searchHaveResults() {
         step("Open page", () -> {
             searchPage.openPage();
@@ -33,6 +37,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Compensation filter check")
     void vacanciesHaveCompensation() {
         step("Open page", () -> {
             searchPage.openPage();
