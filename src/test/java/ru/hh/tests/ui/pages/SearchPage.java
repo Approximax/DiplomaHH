@@ -10,7 +10,7 @@ public class SearchPage {
 
     SelenideElement searchInput = $("[data-qa = 'vacancysearch__keywords-input']"),
                     submitSearch = $("[data-qa = 'advanced-search-submit-button']"),
-                    onlyWithCompensation = $("[data-qa = 'control-vacancysearch__only-with-compensation']"),
+                    onlyWithCompensation = $(".bloko-checkbox__text"),
                     compensation = $("[data-qa = 'vacancy-serp__vacancy-compensation']"),
                     searchResults = $("[data-qa = 'vacancy-serp__results']");
 
@@ -20,14 +20,21 @@ public class SearchPage {
 
     public void searchInput(String value) {
         searchInput.setValue(value);
-        submitSearch.click();
     }
 
     public void onlyWithCompensation() {
         onlyWithCompensation.click();
     }
 
+    public void submitSearch() {
+        submitSearch.click();
+    }
+
     public void checkCompensation() {
         compensation.shouldBe(visible);
+    }
+
+    public void checkThatResultsExist() {
+        searchResults.shouldBe(visible);
     }
 }
