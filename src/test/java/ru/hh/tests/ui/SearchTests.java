@@ -6,5 +6,5 @@ import ru.hh.tests.TestBase;
 public class SearchTests extends TestBase {
 
     @Test
-    void test() {}
+    void searchHaveResults() {}
 }
