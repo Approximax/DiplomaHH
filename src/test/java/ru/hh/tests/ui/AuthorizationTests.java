@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.config.UserConfig;
 import ru.hh.tests.TestBase;
-import ru.hh.tests.ui.pages.components.AuthorizationComponent;
+import ru.hh.tests.ui.pages.AuthorizationPage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -15,22 +15,22 @@ import static io.qameta.allure.Allure.step;
 @Owner("Vladislav Kryukov")
 public class AuthorizationTests extends TestBase {
 
-    AuthorizationComponent authorizationComponent = new AuthorizationComponent();
+    AuthorizationPage authorizationPage = new AuthorizationPage();
     UserConfig userConfig = ConfigFactory.create(UserConfig.class);
 
     @Test
     @DisplayName("Authorization with correct credentials")
     void correctAuthTest() {
         step("Open authorization page", () -> {
-            authorizationComponent.openPage();
+            authorizationPage.openPage();
         });
 
         step("Authorize with correct email and password", () -> {
-            authorizationComponent.emailAuthPassword(userConfig.login(), userConfig.password());
+            authorizationPage.emailAuthPassword(userConfig.login(), userConfig.password());
         });
 
         step("Check that authorization went success", () -> {
-            authorizationComponent.checkAuthSuccess();
+            authorizationPage.checkAuthSuccess();
         });
     }
 
@@ -38,11 +38,11 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Authorization with only login input")
     void onlyLoginAuthTest() {
         step("Open authorization page", () -> {
-            authorizationComponent.openPage();
+            authorizationPage.openPage();
         });
 
         step("Authorize only with login", () -> {
-            authorizationComponent.checkOnlyLoginAuth(userConfig.login());
+            authorizationPage.checkOnlyLoginAuth(userConfig.login());
         });
     }
 
@@ -50,11 +50,11 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Authorization with only password input")
     void onlyPasswordAuthTest() {
         step("Open authorization page", () -> {
-            authorizationComponent.openPage();
+            authorizationPage.openPage();
         });
 
         step("Authorize only with password", () -> {
-            authorizationComponent.checkOnlyPassword(userConfig.password());
+            authorizationPage.checkOnlyPassword(userConfig.password());
         });
     }
 }

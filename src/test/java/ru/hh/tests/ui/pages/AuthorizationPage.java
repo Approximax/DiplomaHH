@@ -1,4 +1,4 @@
-package ru.hh.tests.ui.pages.components;
+package ru.hh.tests.ui.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class AuthorizationComponent {
+public class AuthorizationPage {
 
     SelenideElement emailLogin = $("[data-qa = 'login-input-username']"),
                     loginWithPassword = $("[data-qa = 'expand-login-by-password']"),
