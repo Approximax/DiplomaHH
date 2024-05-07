@@ -12,6 +12,7 @@ import static io.restassured.RestAssured.with;
 public class HhSpecs {
     public static RequestSpecification requestSpec = with()
             .filter(CustomAllureListener.withCustomTemplates())
+            .headers("User-Agent", "QaApp")
             .log().uri()
             .log().method()
             .log().body()
@@ -21,5 +22,6 @@ public class HhSpecs {
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
+            .expectStatusCode(200)
             .build();
 }
