@@ -69,3 +69,39 @@ tasks.withType(Test) {
         }
     }
 }
+
+task authorization_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("authorization")
+    }
+}
+
+task mainPage_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("main_page")
+    }
+}
+
+task searchPage_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("search_page")
+    }
+}
+
+task vacancies_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("vacancies_API")
+    }
+}
+
+task userInfo_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("user_info_API")
+    }
+}
+
+task employers_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("employers_API")
+    }
+}
