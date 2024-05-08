@@ -9,7 +9,8 @@ import ru.hh.tests.api.models.employers.EmployersModel;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static ru.hh.tests.api.specs.HhSpecs.*;
+import static ru.hh.tests.api.specs.HhSpecs.requestSpec;
+import static ru.hh.tests.api.specs.HhSpecs.responseSpec;
 
 public class EmployersTests extends TestBase {
     RandomData randomData = new RandomData();
@@ -20,13 +21,13 @@ public class EmployersTests extends TestBase {
         body.setText(randomData.getRandomEmployer());
         body.setArea(randomData.getRandomArea());
         EmployersModel employersModel = step("Make request", () ->
-            given(requestSpec)
-                    .body(body)
-                    .when()
-                    .get("/employers")
-                    .then()
-                    .spec(responseSpec)
-                    .extract().as(EmployersModel.class));
+                given(requestSpec)
+                        .body(body)
+                        .when()
+                        .get("/employers")
+                        .then()
+                        .spec(responseSpec)
+                        .extract().as(EmployersModel.class));
 
         step("Check the result", () -> {
             assertThat(employersModel.getFound()).isGreaterThanOrEqualTo(0);

@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MainPage {
 
     SelenideElement cookiesPolicy = $("[data-qa = 'cookies-policy-informer']"),
-                    loginForm = $("[data-qa = 'login']");
+            loginForm = $("[data-qa = 'login']");
 
     String authUrl = "https://spb.hh.ru/account/login?backurl=%2F&hhtmFrom=main";
 
@@ -19,7 +19,7 @@ public class MainPage {
         open("");
     }
 
-    public void checkCookiesPolicy () {
+    public void checkCookiesPolicy() {
         cookiesPolicy.shouldBe(visible);
     }
 

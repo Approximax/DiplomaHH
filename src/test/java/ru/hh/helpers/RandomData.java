@@ -7,7 +7,7 @@ public class RandomData {
 
     public String getRandomEmployer() {
         return faker.options().option(
-          "Яндекс",
+                "Яндекс",
                 "Тинькофф",
                 "2ГИС",
                 "HeadHunter",
@@ -26,6 +26,6 @@ public class RandomData {
     }
 
     public String getRandomId() {
-         return String.valueOf(faker.number().numberBetween(1, 100000));
+        return String.valueOf(faker.number().numberBetween(1, 100000));
     }
 }

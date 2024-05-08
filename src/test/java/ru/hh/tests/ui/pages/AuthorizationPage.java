@@ -10,16 +10,16 @@ import static com.codeborne.selenide.Selenide.open;
 public class AuthorizationPage {
 
     SelenideElement emailLogin = $("[data-qa = 'login-input-username']"),
-                    loginWithPassword = $("[data-qa = 'expand-login-by-password']"),
-                    passwordInput = $("[data-qa = 'login-input-password']"),
-                    loginSubmit = $("[data-qa = 'account-login-submit']"),
-                    vacanciesForYou = $("[data-qa = 'bloko-header-2']");
+            loginWithPassword = $("[data-qa = 'expand-login-by-password']"),
+            passwordInput = $("[data-qa = 'login-input-password']"),
+            loginSubmit = $("[data-qa = 'account-login-submit']"),
+            vacanciesForYou = $("[data-qa = 'bloko-header-2']");
 
     public void openPage() {
         open("/account/login");
     }
 
-    public void emailAuthPassword (String email, String password) {
+    public void emailAuthPassword(String email, String password) {
         loginWithPassword.click();
         emailLogin.setValue(email);
         passwordInput.setValue(password);
