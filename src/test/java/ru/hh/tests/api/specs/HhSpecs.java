@@ -24,4 +24,10 @@ public class HhSpecs {
             .log(LogDetail.BODY)
             .expectStatusCode(200)
             .build();
+
+    public static ResponseSpecification response403Spec = new ResponseSpecBuilder()
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectStatusCode(403)
+            .build();
 }

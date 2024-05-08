@@ -24,4 +24,8 @@ public class RandomData {
                 "Тагил"
         );
     }
+
+    public String getRandomId() {
+         return String.valueOf(faker.number().numberBetween(1, 100000));
+    }
 }
