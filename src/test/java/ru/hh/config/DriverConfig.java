@@ -16,4 +16,7 @@ public interface DriverConfig extends Config {
     @Key("browser.size")
     @DefaultValue("1920x1080")
     String browserSize();
+
+    @Key("selenoid.url")
+    String selenoidUrl();
 }
