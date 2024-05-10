@@ -25,7 +25,7 @@ public class TestBase {
         Configuration.browser = driverConfig.browserName();
         Configuration.browserSize = driverConfig.browserSize();
         Configuration.browserVersion = driverConfig.browserVersion();
-        Configuration.remote =
+        Configuration.remote = driverConfig.selenoidUrl();
 
         Configuration.pageLoadStrategy = "eager";
     }
