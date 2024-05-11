@@ -22,7 +22,7 @@ public class VacanciesTests extends TestBase {
     VacanciesRequestModel body = new VacanciesRequestModel();
 
     @Test
-    @DisplayName("Error for deleting favorite vacancy non-authorized user")
+    @DisplayName("Error for deleting favorite vacancy unauthorized user")
     void deleteFavouriteVacancy() {
         body.setVacancyId(randomData.getRandomId());
         ErrorModel errorModel = step("Make the request", () ->
@@ -40,7 +40,7 @@ public class VacanciesTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Error for adding favorite vacancy non-authorized user")
+    @DisplayName("Error for adding favorite vacancy unauthorized user")
     void addingFavouriteVacancy() {
         body.setVacancyId(randomData.getRandomId());
         ErrorModel errorModel = step("Make the request", () ->
@@ -58,7 +58,7 @@ public class VacanciesTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Error for viewing favorite vacancy non-authorized user")
+    @DisplayName("Error for viewing favorite vacancy unauthorized user")
     void showFavoriteVacancies() {
         body.setVacancyId(randomData.getRandomId());
         ErrorModel errorModel = step("Make the request", () ->

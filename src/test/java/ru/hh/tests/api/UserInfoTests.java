@@ -18,7 +18,7 @@ import static ru.hh.tests.api.specs.HhSpecs.response403Spec;
 public class UserInfoTests extends TestBase {
 
     @Test
-    @DisplayName("Error for requesting user info as non-authorized user")
+    @DisplayName("Error for requesting user info as unauthorized user")
     void userInfoRequestError() {
         ErrorModel errorModel = step("Make the request", () ->
                 given(requestSpec)

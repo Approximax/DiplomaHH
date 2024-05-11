@@ -15,19 +15,19 @@ public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
-    @DisplayName("Checking cookies policy bunner")
+    @DisplayName("Checking cookies policy banner")
     void cookiesPolicyTest() {
         step("Open page", () -> {
             mainPage.openPage();
         });
 
-        step("Check policy bunner", () -> {
+        step("Check policy banner", () -> {
             mainPage.checkCookiesPolicy();
         });
     }
 
     @Test
-    @DisplayName("Check opening of the authorization form")
+    @DisplayName("Check the opening of the authorization form.")
     void loginFormOpenTest() {
         step("Open page", () -> {
             mainPage.openPage();
