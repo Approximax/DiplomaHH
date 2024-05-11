@@ -2,7 +2,11 @@ package ru.hh.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:config/driver.properties")
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources({
+        "system:properties",
+        "classpath:config/${environment}.properties"
+})
 public interface DriverConfig extends Config {
 
     @Key("browser.name")
