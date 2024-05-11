@@ -52,3 +52,42 @@ One of the largest job boards that helps people find job opportunities in Russia
 
 <a id="running"></a>
 ## Running Autotests
+To run autotests, you need to run a command specifying the necessary build parameters.
+
+```
+clean ${TASK}
+-Denvironment=${ENV}
+-DbrowserRemoteUrl=${SELENOID_URL}
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-Dusername=${USERNAME}
+-Dpassword=${PASSWORD}
+```
+where:
+>- <code>TASK</code> - authorization / main_page / search_page / vacancies_API / user_info_API / employers_API
+>- <code>BROWSER</code> - the browser in which the tests will be performed (chrome by default)
+>- <code>BROWSER_VERSION</code> - browser version (default is 100.0)
+>- <code>BROWSER_SIZE</code> - browser window size (default is 1920x1080)
+>- <code>SELENOID_URL</code> - the address for running tests remotely
+>- <code>USERNAME</code> - login for running tests involving authorization
+>- <code>PASSWORD</code> - password for running tests involving authorization
+
+<a id="report"></a>
+## <img alt="Allure Reports" src="images/logo/Allure.svg" width="40" height="40"/> [Allure Report](https://jenkins.autotests.cloud/job/C24_approximax-unit27Diplom/allure/)
+<img title="Allure Overview" src="images/attachment/allureOverview.png"> 
+<img title="Allure Suites" src="images/attachment/allureSuites.png"> 
+
+<a id="testops"></a>
+## <img alt="Allure TestOps" src="images/logo/Allure_TO.svg" width="40" height="40"/> [Allure TestOps integration](https://allure.autotests.cloud/project/4226/dashboards)
+<img title="TestOps Results" src="images/attachment/testsOpsResults.png">
+
+<a id="jira"></a>
+## <img alt="Jira" src="images/logo/Jira.svg" width="40" height="40"/> [Jira integration](https://jira.autotests.cloud/browse/HOMEWORK-1153)
+<img title="Jira integration" src="images/attachment/jira.png"> 
+
+<a id="telegram"></a>
+## <img alt="Telegram" src="images/logo/Telegram.svg" width="40" height="40"/>Telegram notifications via bot
+
+<a id="video"></a>
+## <img alt="Selenoid" src="images/logo/Selenoid.svg" width="40" height="40"/>Selenoid video of the test run
