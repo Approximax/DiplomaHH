@@ -81,6 +81,7 @@ where:
 <a id="testops"></a>
 ## <img alt="Allure TestOps" src="images/logo/Allure_TO.svg" width="40" height="40"/> [Allure TestOps integration](https://allure.autotests.cloud/project/4226/dashboards)
 <img title="TestOps Results" src="images/attachment/testsOpsResults.png">
+<img title="TestOps Results" src="images/attachment/testOpsCases.png">
 
 <a id="jira"></a>
 ## <img alt="Jira" src="images/logo/Jira.svg" width="40" height="40"/> [Jira integration](https://jira.autotests.cloud/browse/HOMEWORK-1153)
