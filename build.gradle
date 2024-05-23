@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
-    id "io.freefair.lombok" version "6.0.0-m2"
+    id "io.freefair.lombok" version "8.6"
 }
 
 group = "ru.hh"
@@ -12,12 +12,12 @@ repositories {
 }
 
 def restAssuredVersion = "5.4.0",
-    junitVersion = "5.11.0-M1",
-    slf4jVersion = "2.0.7",
-    selenideVersion = "7.2.3",
+    junitVersion = "5.10.2",
+    slf4jVersion = "2.0.13",
+    selenideVersion = "7.3.2",
     allureVersion = "2.25.0",
     ownerVersion = "1.0.12",
-    jacksonVersion = "2.17.0",
+    jacksonVersion = "2.17.1",
     faker = "1.0.2",
     assertj = "3.25.3"
 
