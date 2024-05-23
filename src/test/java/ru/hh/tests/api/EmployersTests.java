@@ -36,7 +36,7 @@ public class EmployersTests extends TestBase {
                         .extract().as(EmployersModel.class));
 
         step("Check the result", () -> {
-            assertThat(employersModel.getFound()).isGreaterThanOrEqualTo(0);
+            assertThat(employersModel.getFound()).isGreaterThan(0);
         });
     }
 }

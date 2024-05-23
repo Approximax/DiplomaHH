@@ -26,7 +26,7 @@ public class AuthorizationTests extends TestBase {
         });
 
         step("Authorize with correct email and password", () -> {
-            authorizationPage.emailAuthPassword(userConfig.login(), userConfig.password());
+            authorizationPage.authorizationWithLoginPassword(userConfig.login(), userConfig.password());
         });
 
         step("Check that authorization went success", () -> {

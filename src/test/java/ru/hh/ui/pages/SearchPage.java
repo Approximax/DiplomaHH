@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchPage {
 
-    SelenideElement searchInput = $("[data-qa = 'vacancysearch__keywords-input']"),
+    private final SelenideElement searchInput = $("[data-qa = 'vacancysearch__keywords-input']"),
             submitSearch = $("[data-qa = 'advanced-search-submit-button']"),
             onlyWithCompensation = $(".bloko-checkbox__text"),
             compensation = $("[data-qa = 'vacancy-serp__vacancy-compensation']"),

@@ -13,10 +13,7 @@ public class HhSpecs {
     public static RequestSpecification requestSpec = with()
             .filter(CustomAllureListener.withCustomTemplates())
             .headers("User-Agent", "QaApp")
-            .log().uri()
-            .log().method()
-            .log().body()
-            .log().headers()
+            .log().all()
             .contentType(ContentType.JSON);
 
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
