@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.helpers.RandomData;
 import ru.hh.tests.TestBase;
-import ru.hh.tests.api.models.ErrorModel;
-import ru.hh.tests.api.models.vacancies.VacanciesRequestModel;
+import ru.hh.api.models.ErrorModel;
+import ru.hh.api.models.vacancies.VacanciesRequestModel;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static ru.hh.tests.api.specs.HhSpecs.requestSpec;
-import static ru.hh.tests.api.specs.HhSpecs.response403Spec;
+import static ru.hh.api.specs.HhSpecs.requestSpec;
+import static ru.hh.api.specs.HhSpecs.response403Spec;
 
 @Tag("vacancies_API")
 @Owner("Vladislav Kryukov")

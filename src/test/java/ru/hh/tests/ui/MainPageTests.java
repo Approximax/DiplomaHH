@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.tests.TestBase;
-import ru.hh.tests.ui.pages.MainPage;
+import ru.hh.ui.pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
 

@@ -1,4 +1,4 @@
-package ru.hh.tests.api.models.employers;
+package ru.hh.api.models.employers;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

@@ -23,11 +23,11 @@ One of the largest job boards that helps people find job opportunities in Russia
 - <code>[Gradle](https://gradle.org/)</code> was used as an automatic build system.
 - Frameworks <code>[JUnit5](https://junit.org/junit5/)</code> and <code>[Selenide](https://selenide.org/)</code> for automated testing of web applications have been applied.
 - Browsers were launched via <code>[Selenoid](https://aerokube.com/selenoid/)</code>.
-- To run tests remotely a job was implemented in <code>[Jenkins](https://jenkins.autotests.cloud/job/MaryPimenova-VacancyProjectUnit14/)</code> with the creation of an <code>[Allure-report](https://jenkins.autotests.cloud/job/MaryPimenova-VacancyProjectUnit14/7/allure/)</code> and sending the results to <code>[Telegram](https://web.telegram.org/)</code> using special Telegram bot.
-- Integrations with с <code>[Allure TestOps](https://allure.autotests.cloud/project/2434/dashboards)</code> and <code>[Jira](https://jira.autotests.cloud/browse/HOMEWORK-720)</code> were implemented.
+- To run tests remotely a job was implemented in <code>[Jenkins](https://jenkins.autotests.cloud/job/C24_approximax-unit27Diplom/)</code> with the creation of an <code>[Allure-report](https://jenkins.autotests.cloud/job/C24_approximax-unit27Diplom/11/allure/)</code> and sending the results to <code>[Telegram](https://web.telegram.org/)</code> using special Telegram bot.
+- Integrations with с <code>[Allure TestOps](https://allure.autotests.cloud/project/4226/dashboards)</code> and <code>[Jira](https://jira.autotests.cloud/browse/HOMEWORK-1177)</code> were implemented.
 
 <a id="testcases"></a>
-## Executed automation test cases
+## Implemented automation test cases
 ### Ui-tests
 #### Authorization
 - Authorization with correct credentials
@@ -84,11 +84,12 @@ where:
 <img title="TestOps Results" src="images/attachment/testOpsCases.png">
 
 <a id="jira"></a>
-## <img alt="Jira" src="images/logo/Jira.svg" width="40" height="40"/> [Jira integration](https://jira.autotests.cloud/browse/HOMEWORK-1153)
+## <img alt="Jira" src="images/logo/Jira.svg" width="40" height="40"/> [Jira integration](https://jira.autotests.cloud/browse/HOMEWORK-1177)
 <img title="Jira integration" src="images/attachment/jira.png"> 
 
 <a id="telegram"></a>
 ## <img alt="Telegram" src="images/logo/Telegram.svg" width="40" height="40"/>Telegram notifications via bot
+<img title="Jira integration" src="images/attachment/telegram.png"> 
 
 <a id="video"></a>
 ## <img alt="Selenoid" src="images/logo/Selenoid.svg" width="40" height="40"/>Selenoid video of the test run

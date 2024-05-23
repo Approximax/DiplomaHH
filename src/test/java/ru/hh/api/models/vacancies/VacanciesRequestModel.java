@@ -1,4 +1,4 @@
-package ru.hh.tests.api.models.vacancies;
+package ru.hh.api.models.vacancies;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
