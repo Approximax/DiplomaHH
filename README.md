@@ -93,3 +93,4 @@ where:
 
 <a id="video"></a>
 ## <img alt="Selenoid" src="images/logo/Selenoid.svg" width="40" height="40"/>Selenoid video of the test run
+<img title="Jira integration" src="images/attachment/video.gif"> 
